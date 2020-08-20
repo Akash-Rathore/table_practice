@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://admin.sattaking-real.com/">
+    <meta charset="utf-8">
+    <title>Satta King Real</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/site.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+</head>
+<body class="layout-row">
+<div class="loader">
+    <div class="loading"></div>
+</div>
+<div id="aside" class="page-sidenav no-shrink bg-light nav-dropdown fade" aria-hidden="true">
+    <div class="sidenav h-100 modal-dialog bg-light">
+        <div class="navbar">
+            <a href="admin" class="navbar-brand"><img src="assets/img/logo.png"></a>
+        </div>
+        <div class="flex scrollable hover">
+            <div class="nav-active-text-primary" data-nav="">
+                <ul class="nav bg">
+                    <li>
+                        <a href="admin">
+                            <span class="nav-icon text-primary"><i data-feather="home"></i></span>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="satta-types">
+                            <span class="nav-icon text-primary"><i data-feather="calendar"></i></span>
+                            <span class="nav-text">Satta Types</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="satta-domains">
+                            <span class="nav-icon text-primary"><i data-feather="globe"></i></span>
+                            <span class="nav-text">Satta Domains</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="satta-numbers">
+                            <span class="nav-icon text-primary"><i data-feather="list"></i></span>
+                            <span class="nav-text">Satta Numbers</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="visitors">
+                            <span class="nav-icon text-warning"><i data-feather="message-circle"></i></span>
+                            <span class="nav-text">Visitors</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="domains">
+                            <span class="nav-icon text-warning"><i data-feather="globe"></i></span>
+                            <span class="nav-text">Domains</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="khaiwals">
+                            <span class="nav-icon text-warning"><i data-feather="globe"></i></span>
+                            <span class="nav-text">Khaiwals</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="khaiwal-domains">
+                            <span class="nav-icon text-warning"><i data-feather="globe"></i></span>
+                            <span class="nav-text">Khaiwal Domains</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="chats">
+                            <span class="nav-icon text-warning"><i data-feather="message-circle"></i></span>
+                            <span class="nav-text">Chats</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="chat-config">
+                            <span class="nav-icon text-warning"><i data-feather="message-circle"></i></span>
+                            <span class="nav-text">Chat Config</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="logout">
+                            <span class="nav-icon text-warning"><i data-feather="globe"></i></span>
+                            <span class="nav-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class=" mt-3 w-md animate fadeIn">
+                <div class="setting px-3">
+                    <div class="mb-2 text-muted"><strong>Color:</strong></div>
+                    <div class="mb-2">
+                        <label class="radio radio-inline ui-check ui-check-md">
+                            <input type="radio" name="bg" value=""><i></i></label>
+                        <label class="radio radio-inline ui-check ui-check-color ui-check-md">
+                            <input type="radio" name="bg" value="bg-dark"> <i class="bg-dark"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="main" class="layout-column flex">
+    <div id="header" class="page-header d-xl-none">
+    <div class="navbar navbar-expand-lg">
+        <!-- brand -->
+        <a href="admin" class="navbar-brand d-lg-none">
+            <img src="assets/img/logo.png">
+        </a>
+        <!-- / brand -->
+        <!-- Navbar collapse -->
+        <ul class="nav navbar-menu order-1 order-lg-2">
+            <li class="nav-item d-none d-sm-block"><a class="nav-link px-2" data-toggle="fullscreen"
+                                                      data-plugin="fullscreen"><i data-feather="maximize"></i></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link px-2" data-toggle="dropdown"><i data-feather="settings"></i> </a>
+                <div class="dropdown-menu dropdown-menu-center mt-3 w-md animate fadeIn">
+                    <div class="setting px-3">
+                        <div class="mb-2 text-muted"><strong>Color:</strong></div>
+                        <div class="mb-2">
+                            <label class="radio radio-inline ui-check ui-check-md">
+                                <input type="radio" name="bg" value=""><i></i></label>
+                            <label class="radio radio-inline ui-check ui-check-color ui-check-md">
+                                <input type="radio" name="bg" value="bg-dark"> <i class="bg-dark"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- ############ Setting END-->
+            </li>
+            <!-- Navarbar toggle btn -->
+            <li class="nav-item d-lg-none"><a class="nav-link px-1" data-toggle="modal" data-target="#aside"><i
+                            data-feather="menu"></i></a></li>
+        </ul>
+    </div>
+</div>
+    <div id="content" class="flex">
+        <div>
+            <div class="page-hero page-container" id="page-hero">
+                <div class="padding d-flex">
+                    <div class="page-title">
+                        <h2 class="text-md text-highlight">Chats</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!--            <button id="abcd123">Click</button>-->
+            <div class="page-content page-container" id="page-content">
+                <div class="_padding table-responsive">
+                    <div id="toolbar" class="mr-3">
+                        <form action="webservice-admin/chat/get" class="form-submit"
+                              id="visitor-filter-form">
+                            <select class="form-control filter-visitor-select" name="domain_id"
+                                    style="float: left; width: 176px;margin-right: 15px;">
+                                <option value="">All</option>
+                                <option value='1'>http://satta-king.com</option>                            </select>
+
+                            <select class="form-control filter-visitor-select" name="custom-range-filter"
+                                    style="float: left; width: 176px;margin-right: 15px;">
+                                <option value="today">Today</option>
+                                <option value="yesterday">Yesterday</option>
+                                <option value="last-7-days">Last 7 Days</option>
+                                <option value="last-30-days">Last 30 Days</option>
+                                <option value="this-month">This Month</option>
+                                <option value="last-month">Last Month</option>
+                                <option value="custom-range">Custom Range</option>
+                            </select>
+
+                            <input type="date" class="form-control filter-visitor-date-from" name="date_from"
+                                   style="width: 176px; float: left; margin-right: 15px;" max="2020-08-20"
+                                   required disabled>
+
+                            <input type="date" class="form-control filter-visitor-date-to" name="date_to"
+                                   style="width: 176px; float: left;" value="2020-08-20"
+                                   max="2020-08-20" required disabled>
+                        </form>
+                    </div>
+
+                    <table
+                            class="table table-theme table-hover v-middle satta-chat-table bootstrap-data-table"
+                            data-plugin="bootstrapTable"
+                            data-toolbar="#toolbar"
+                            data-search="true"
+                            data-search-align="left"
+                            data-show-export="true"
+                            data-show-columns="true"
+                            data-detail-view="false"
+
+                            data-pagination="true"
+                            data-page-list="[10, 25, 50, 100, ALL]"
+                            data-unique-id="id"
+                            data-url="webservice-admin/chat/get">
+                        <thead>
+                        <tr>
+                            <th data-sortable="true" data-field="id">ID</th>
+                            <th data-sortable="true" data-field="message">Chat</th>
+                            <th data-sortable="true" data-field="domain">Domain</th>
+                            <th data-sortable="true" data-field="created_at">Created At</th>
+                            <th data-width="60" width="60" data-field="action">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer" class="page-footer hide">
+    <div class="d-flex p-3">
+        <span class="text-sm text-muted flex">&copy; Copyright. flatfull.com</span>
+        <div class="text-sm text-muted">Version 1.1.2</div>
+    </div>
+</div>
+<script src="assets/js/site.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.13.1/dist/sweetalert2.all.min.js"></script>
+<script src="assets/js/plugins/jquery-ui.min.js"></script>
+<script src="assets/js/admin-script.js"></script>
+</body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpbh'},{'server':'sg3plvcpnl395193'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+<script type="text/javascript">
+    $(document).on('click', '.modal-create', function () {
+    let modalTarget = $(this).data('target');
+    let modalTitle = $(this).data('modal-title');
+    let buttonLabel = $(this).data('button-label');
+    let formAction = $(this).data('form-action') + '/' + $(this).data('index');
+
+    $(`${modalTarget} .modal-title`).html(modalTitle);
+    $(`${modalTarget} .submit-btn-label`).html(buttonLabel);
+    $(`${modalTarget} form`).attr('action', formAction).trigger('reset');
+
+    $(modalTarget).on('shown.bs.modal', function () {
+        $(modalTarget + ' .auto-focus-field').focus();
+    });
+});
+
+function ajax_start() {
+    $('.loader').show();
+}
+
+function ajax_end() {
+    $('.loader').hide();
+}
+
+$(document).on('submit', '.form-submit', function (e) {
+    ajax_start();
+    e.preventDefault();
+    let form = $(this);
+    let form_data = new FormData($(form)[0]);
+    $.ajax({
+        url: $(form).attr('action'),
+        type: 'post',
+        dataType: 'json',
+        contentType: false,
+        processData: false,
+        data: form_data,
+        success: function (result) {
+            console.log(result);
+            if (result.type === 'success') {
+                $(result.modal_show).modal('show');
+                $(result.modal_hide).modal('hide');
+
+                if (result.data) {
+                    $(result.table).bootstrapTable('load', result.data);
+                }
+
+                if (result.create_row) {
+                    $(result.table).bootstrapTable('prepend', result.create_row);
+                    if (result.update_column_value_by_js) {
+                        update_data_index(result.table, result.update_column_value_by_js);
+                    }
+                }
+
+
+                if (result.update_row) {
+                    $(result.update_row.table).bootstrapTable('updateRow', {
+                        index: result.update_row.key,
+                        row: result.update_row.row
+                    })
+
+                    if (result.update_column_value_by_js) {
+                        update_data_index(result.update_row.table, result.update_column_value_by_js);
+                    }
+                }
+
+                if (result.page_reload) {
+                    window.location.reload();
+                }
+
+            } else {
+                Swal.fire(result.swal);
+            }
+            feather.replace({'stroke-width': 1.5, width: 16});
+            ajax_end();
+        },
+        error: function () {
+            console.log("AjaxError");
+            ajax_end();
+        }
+    });
+})
+
+
+function update_data_index(table, col_serial) {
+    let length = $(table + ' tbody').children().length;
+    for (index = 0; index < length; index++) {
+        $(table + ` tbody tr:nth-child(${index + 1}) [data-index]`).attr('data-index', index);
+        $(table + ` tbody tr:nth-child(${index + 1})`).attr('data-uniqueid', index);
+        $(table + ` tbody tr:nth-child(${index + 1}) td:nth-child(${col_serial})`).text(index);
+    }
+}
+
+
+$(document).on('click', '.edit', function () {
+    let element = $(this);
+    let url = $(this).data('url');
+    // let id = $(this).data('id');
+    let form = $(this).data('target');
+    let key = $(this).attr('data-index');
+    $.ajax({
+        url,
+        dataType: 'json',
+        success: function (result) {
+            console.log(result);
+
+            // checkbox unchecked first when modal open
+            $('input[type=checkbox]').prop("checked", false);
+
+            if (result.data.data) {
+                $.each(result.data.data, function (key, value) {
+                    $(`${form} [name="${key}"]`).val(value);
+                });
+            }
+
+
+            // $(element).parents('tr').html("<tr><td><a href='http://abc.com' target='_blank'>http://abc.com</a></td><td><button class='btn text-primary btn-icon  btn-raised btn-rounded'><i data-feather='edit'></i></button>&nbsp;&nbsp;<button class='btn text-danger btn-icon  btn-raised btn-rounded'><i data-feather='trash'></i></button></td></tr>");
+
+
+            // $.fn.bootstrapTable.init = init;
+
+            //
+            // if (result.data.single_select) {
+            //     $.each(result.data.single_select, function (key, value) {
+            //         $(form + ` select[name=${key}]`).select2('val', value);
+            //     });
+            // }
+            //
+            // if (result.data.checkbox) {
+            //     $.each(result.data.checkbox, function (key, value) {
+            //         $(`${form} .checkbox input[value="${value}"]`).prop("checked", true);
+            //     });
+            // }
+            //
+            // if (result.data.radio) {
+            //     $.each(result.data.radio, function (key, value) {
+            //         $(`${form} input[type="radio"][value="${value}"]`).prop('checked', true);
+            //     });
+            // }
+            //
+            // if (result.data.textarea) {
+            //     $.each(result.data.textarea, function (key, value) {
+            //         $(`${form} [name="${key}"]`).html(value);
+            //     });
+            // }
+        },
+        error: function () {
+            console.log("AJAX ERROR")
+        }
+    });
+});
+
+
+function get_result(url, table) {
+    $.ajax({
+        url,
+        type: 'get',
+        dataType: 'json',
+        success: function (result) {
+            if (result.type === 'success') {
+                $(table).html(result.data);
+            }
+        }
+    });
+}
+
+
+$(document).on('click', '.delete', function () {
+    let element = $(this);
+    let id = $(this).data('id');
+    let url = $(this).data('url');
+    let name = $(this).data('name');
+    var key = $(this).attr('data-index');
+    console.log(key);
+
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+        customClass: {
+            icon: '',
+            content: '',
+            confirmButton: '',
+            cancelButton: 'bg-dark',
+        }
+    }).then((result) => {
+        if (result.value) {
+            $.ajax({
+                url,
+                type: 'get',
+                dataType: 'json',
+                data: {id},
+                success: function (result) {
+                    $(element).closest('tr').find('td').addClass('bg-danger').fadeOut(1000, function () {
+
+                        if (result.delete_row) {
+                            $(result.delete_row.table).bootstrapTable('remove', {
+                                field: result.delete_row.col_name,
+                                values: [result.delete_row.value]
+                            })
+                            update_data_index(result.delete_row.table, result.update_column_value_by_js);
+                        }
+
+                        if (result.delete_row_by_unique_id) {
+                            $(result.delete_row_by_unique_id.table).bootstrapTable('removeByUniqueId', key)
+                            update_data_index(result.delete_row_by_unique_id.table, result.update_column_value_by_js);
+                        }
+                    });
+                },
+                error: function () {
+                    console.log('AJAX ERROR IN __DELETE__"');
+                }
+            });
+        }
+    });
+});
+
+
+$(document).on('change', '#selece-satta-type-for-choose-domains', function () {
+    let id = $(this).val();
+    if (id !== '') {
+        ajax_start();
+        $.ajax({
+            url: 'webservice-admin/satta-domain/fetch-domains',
+            type: 'post',
+            dataType: 'json',
+            data: {id},
+            success: function (result) {
+                // console.log(result);
+                $('#domain-fetch-after-select-satta-type').html(result.create_row)
+                ajax_end();
+            },
+            error: function () {
+                ajax_end();
+                // console.log("AJAX ERROR");
+            }
+        });
+    } else {
+        $('#domain-fetch-after-select-satta-type').html("<h5>Please Select First any Satta Type</h5>");
+    }
+});
+
+
+$(document).on('click', '.switch-satta-domain', function () {
+    let id = $(this).data('id');
+    let column = $(this).data('column');
+    let state = $(this).attr('data-state');
+
+    if (state === 'checked') {
+        state = '';
+        $(this).attr('data-state', '');
+    } else {
+        state = 'checked';
+        $(this).attr('data-state', 'checked');
+    }
+    ajax_start();
+    $.ajax({
+        url: 'webservice-admin/satta-domain/switch',
+        type: 'post',
+        dataType: 'json',
+        data: {
+            id,
+            column,
+            state
+        },
+        success: function (result) {
+            // console.log(result);
+            ajax_end();
+        },
+        error: function () {
+            ajax_end();
+            // console.log("AJAX ERROR");
+        }
+    });
+});
+
+
+$(document).on('click', '.delete-satta-number', function () {
+    let element = $(this);
+    let id = $(this).data('id');
+    let url = $(this).data('url');
+    let name = $(this).data('name');
+    let time = $(this).data('time');
+    let satta_type_id = $(this).data('satta-type-id');
+    var key = $(this).attr('data-key');
+
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+        customClass: {
+            icon: '',
+            content: '',
+            confirmButton: '',
+            cancelButton: 'bg-dark',
+        }
+    }).then((result) => {
+        if (result.value) {
+            $.ajax({
+                url,
+                type: 'get',
+                dataType: 'json',
+                data: {id, name, time, satta_type_id},
+                success: function (result) {
+                    if (result.update_row) {
+                        $(result.update_row.table).bootstrapTable('updateRow', {
+                            index: result.update_row.key,
+                            row: result.update_row.row
+                        })
+                    }
+                },
+                error: function () {
+                    console.log('AJAX ERROR IN __DELETE__"');
+                }
+            });
+        }
+    });
+});
+
+
+// =====================================================================================================================
+$(document).on('change', '.filter-satta-number-select', function () {
+    if ($(this).val() === 'custom-range') {
+        $('.filter-satta-number-date-from,.filter-satta-number-date-to').removeAttr('disabled');
+    } else {
+        $('.filter-satta-number-date-from,.filter-satta-number-date-to').attr('disabled', 'true');
+        $('#satta-number-filter-form').submit();
+    }
+}).on('change', '.filter-satta-number-date-from', function () {
+    let date_from = $(this).val();
+    $('.filter-satta-number-date-to').attr('min', date_from);
+    $('#satta-number-filter-form').submit();
+}).on('change', '.filter-satta-number-date-to', function () {
+    let date_to = $(this).val();
+    $('.filter-satta-number-date-from').attr('max', date_to);
+    if ($('.filter-satta-number-date-from').val() === '') {
+        $('.filter-satta-number-date-from').val(date_to);
+        $('#satta-number-filter-form').submit();
+    }
+});
+
+
+// =====================================================================================================================
+$(document).on('change', '.filter-visitor-select', function () {
+    if ($(this).val() === 'custom-range') {
+        $('.filter-visitor-date-from,.filter-visitor-date-to').removeAttr('disabled');
+    } else {
+        $('.filter-visitor-date-from,.filter-visitor-date-to').attr('disabled', 'true');
+        $('#visitor-filter-form').submit();
+    }
+}).on('change', '.filter-visitor-date-from', function () {
+    let date_from = $(this).val();
+    $('.filter-visitor-date-to').attr('min', date_from);
+    $('#visitor-filter-form').submit();
+}).on('change', '.filter-visitor-date-to', function () {
+    let date_to = $(this).val();
+    $('.filter-visitor-date-from').attr('max', date_to);
+    if ($('.filter-visitor-date-from').val() === '') {
+        $('.filter-visitor-date-from').val(date_to);
+        $('#visitor-filter-form').submit();
+    }
+});
+
+
+$(document).on('click', '.satta-domain-modal-open', function () {
+    let domain = $(this).data('domain');
+    $('#modal-satta-domain .domain-name').html(domain);
+
+    let domain_id = $(this).data('domain-id');
+    $('#modal-satta-domain #domain-id').val(domain_id);
+    $.ajax({
+        url: 'webservice-admin/satta-domain/get-satta-types',
+        type: 'post',
+        dataType: 'json',
+        data: {
+            domain_id
+        },
+        success: function (result) {
+            console.log(result);
+            $('#modal-satta-domain table tbody').html(result.data);
+        },
+        error: function () {
+            console.log("AJAX ERROR");
+        }
+
+    });
+});
+
+
+$(document).on('click', '.satta-domain-type-show-hide', function () {
+    if ($(this).is(":checked")) {
+        $(this).parents('td').next('td').find('input').removeAttr('disabled');
+        $(this).parents('td').next('td').next('td').find('input').removeAttr('disabled');
+    } else {
+        $input_1 = $(this).parents('td').next('td').find('input');
+        $input_1.attr('disabled', '');
+        $input_1.removeAttr('checked');
+        $input_1.attr('data-state', '');
+
+        $input_2 = $(this).parents('td').next('td').next('td').find('input');
+        $input_2.attr('disabled', '');
+        $input_2.removeAttr('checked');
+        $input_2.attr('data-state', '');
+    }
+});
+
+
+$(document).on('click', '.satta-khaiwal-domain-open', function () {
+    let domain = $(this).data('domain');
+    let domain_id = $(this).data('domain-id');
+    $('#modal-khaiwal-domain .domain-name').html(domain);
+    $('#modal-khaiwal-domain #khaiwal_top').attr('data-domain-id', domain_id);
+    $('#modal-khaiwal-domain #khaiwal_bottom').attr('data-domain-id', domain_id);
+    $.ajax({
+        url: 'webservice-admin/satta-domain/get-khaiwal',
+        type: 'post',
+        dataType: 'json',
+        data: {
+            domain_id
+        },
+        success: function (result) {
+            console.log(result);
+            $('#modal-khaiwal-domain #khaiwal_top').val(result.data.top);
+            $('#modal-khaiwal-domain #khaiwal_bottom').val(result.data.bottom);
+        },
+        error: function () {
+            console.log("AJAX ERROR");
+        }
+
+    });
+});
+
+$(document).on('change', '#khaiwal_top,#khaiwal_bottom', function () {
+    let domain_id = $(this).attr('data-domain-id');
+    let khaiwal_id = $(this).val();
+    let position = $(this).data('position');
+    ajax_start();
+    $.ajax({
+        url: 'webservice-admin/satta-domain/create-khaiwal',
+        type: 'post',
+        dataType: 'json',
+        data: {
+            domain_id,
+            khaiwal_id,
+            position
+        },
+        success: function (result) {
+            console.log(result);
+            ajax_end();
+        },
+        error: function () {
+            console.log("AJAX ERROR");
+        }
+    });
+});
+
+// sorting ---  start
+$(function () {
+    $(".sortable tbody").sortable({
+        update: function (event, ui) {
+            var new_order = $(this).sortable('toArray').toString();
+            var domain_id = $('#modal-satta-domain #domain-id').val();
+            ajax_start();
+            $.ajax({
+                url: 'webservice-admin/satta-domain/reorder',
+                type: 'post',
+                dataType: 'json',
+                cache: false,
+                data: {
+                    domain_id, new_order
+                },
+                success: function (data) {
+                    console.log(data);
+                    ajax_end();
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        }
+    });
+    $(".sortable tbody").disableSelection();
+});
+// sorting ---  end
+</script>
+</html>
+
+
+
